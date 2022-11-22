@@ -1,6 +1,6 @@
 macro(wpilib_target_warnings target)
     if(NOT MSVC)
-        target_compile_options(${target} PRIVATE -Wall -pedantic -Wextra -Werror -Wno-unused-parameter -Wno-error=deprecated-declarations ${WPILIB_TARGET_WARNINGS})
+        target_compile_options(${target} PRIVATE -Wall -pedantic -Wextra -Wno-unused-parameter -Wno-error=deprecated-declarations ${WPILIB_TARGET_WARNINGS})
     else()
         target_compile_options(${target} PRIVATE /wd4146 /wd4244 /wd4251 /wd4267 /wd4996 /WX ${WPILIB_TARGET_WARNINGS})
     endif()
